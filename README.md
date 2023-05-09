@@ -1,14 +1,23 @@
 # 150_neetcode_problems
 150 Problems 
 
-| Status | Problem                      | Difficulty | Code |
-| ------ | ---------------------------- | ---------- | ---- |
-| 0      | Contains Duplicate           | Easy       | C++  |
-| 1      | Valid Anagram                | Easy       | C++  |
-| 0      | Two Sum                      | Easy       | C++  |
-| 0      | Group Anagrams               | Easy       | C++  |
-| 0      | Top K Frequent Elements      | Easy       | C++  |
-| 0      | Product of Array Except Self | Easy       | C++  |
-| 0      | Valid Sudoku                 | Easy       | C++  |
-| 0      | Encode and Decode Strings    | Easy       | C++  |
-| 0      | Longest Consecutive Sequence | Easy       | C++  |
+| Method for problemsolving | Problems |
+| ------------------------- | -------- |
+| Arrays & Hashing          | (1/9)    | 
+| Two Pointers              | (0/5)    |
+| Sliding Window            | (0/6)    |
+| Stack                     | (0/7)    |
+| Binary Search             | (0/7)    |
+| Linked list               | (0/11)   |
+| Trees                     | (0/15)   |
+| Tries                     | (0/3)    |
+| Heap / Priority Queue     | (0/7)    |
+| Backtracing               | (0/9)    |
+| Graphs                    | (0/13)   |
+| Advanced Graphs           | (0/6)    |
+| 1-D Dynamic Programming   | (0/12)   |
+| 2-D Dynamic Programming   | (0/11)   |
+| Greedy                    | (0/8)    |
+| Intervals                 | (0/6)    |
+| Math & Geometry           | (0/8)    |
+| Bit Manuplation           | (0/7)    |
