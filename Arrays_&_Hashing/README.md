@@ -1,9 +1,9 @@
 
 | Status | Problem                      | Difficulty | Code | Time taken | runtime | Memory |
 | ------ | ---------------------------- | ---------- | ---- | ---------- | ------- | ------ |
-| 0      | Contains Duplicate           | Easy       | C++  | 44m 22s    | 139ms   | 57.1MB |
+| 1      | Contains Duplicate           | Easy       | C++  | 44m 22s    | 139ms   | 57.1MB |
 | 1      | Valid Anagram                | Easy       | C++  | 1h 20m 20s | 4ms     | 7.2MB  | 
-| 0      | Two Sum                      | Easy       | C++  | 19m 43s    | 703ms   | 10 MB  |
+| 1      | Two Sum                      | Easy       | C++  | 19m 43s    | 703ms   | 10 MB  |
 | 0      | Group Anagrams               | Medium     | C++  |            |         |        |
 | 0      | Top K Frequent Elements      | Medium     | C++  |            |         |        |
 | 0      | Product of Array Except Self | Medium     | C++  |            |         |        |
