@@ -10,24 +10,16 @@ public:
 
         int n = nums.size();
         std::vector<int>arr;
-        std::priority_queue<int, std::vector<int>>pg;
-        std::vector<int>res;
 
         for(int i = 0; i < n; i++){
+            int sum = 1;
             for(int j=0; j < n; j++){
                 if(i==j){
 
                 }else{
                     int newNum = nums[j]; 
-                    pg.push(newNum);
+                    sum *= newNum;
                 }
-            }
-            int arrSize = pg.size();
-            int sum = 1;
-
-            for(int k=0; k < arrSize; k++){
-                sum *= pg.top();
-                pg.pop();
             }
             arr.push_back(sum);
         }
