@@ -17,13 +17,25 @@ public:
         // A Sudoku board (partially filled) could be valid but is not necessarily solvable.
         // Only the filled cells need to be validated according to the mentioned rules.
         
+        std::vector<int> checkingArr;
+
+        bool duplicateflag = false;
+
+
         int n = board.size();
         // Cheacking Horizontal line of the sudoku 9x9 grid
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
-                std::cout<<board[i][j];
+                checkingArr.push_back(board[i][j]-'0');
             }
-            std::cout<<'\n';
+            duplicateflag = containsDuplicate(checkingArr);
+            if (duplicateflag == true)
+            {
+                return true;
+            }
+            checkingArr.erase(checkingArr.begin(),checkingArr.end());
+
+            std::cout<<"Check ";
         }
 
         std::cout<<'\n';
@@ -32,9 +44,16 @@ public:
         // Cheacking Vertical line of the sudoku 9x9 grid
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
-                std::cout<<board[j][i];
+                checkingArr.push_back(board[j][i]-'0');
             }
-            std::cout<<'\n';
+            duplicateflag = containsDuplicate(checkingArr);
+            if (duplicateflag == true)
+            {
+                return true;
+            }
+            checkingArr.erase(checkingArr.begin(),checkingArr.end());
+
+            std::cout<<"Check ";
         }
 
         std::cout<<'\n';
@@ -46,14 +65,39 @@ public:
         for(int k = 0; k < 3; k++){
             for(int i = 0; i < n; i++){
                 for(int j = nextStartGrid; j < nextEndGrid; j++){
-                    std::cout<<board[i][j];
+                    checkingArr.push_back(board[i][j]-'0');
+                    if(checkingArr.size() == 9){
+                        duplicateflag = containsDuplicate(checkingArr);
+                        if (duplicateflag == true)
+                        {
+                            return true;
+                        }
+                        checkingArr.erase(checkingArr.begin(),checkingArr.end());
+                        std::cout<<"Check ";
+                    }
                 }
-                std::cout<<'\n';
-            }
+                }
                 std::cout<<'\n';
                 nextStartGrid += 3;
                 nextEndGrid += 3;
         }
-      
-    }
 };
+
+bool containsDuplicate(std::vector<int>& board){
+        std::sort(board.begin(),board.end());
+        bool flag = true;
+        int n = board.size();
+        for(int i = 0; i < n; i++ ){
+            if (board[i]==-2)
+            {
+                continue;
+            }else{
+                if (board[i]==board[i+1]) return flag;
+            }
+        }
+        flag = false;
+        return flag;
+        }
+      
+}
+
