@@ -16,7 +16,44 @@ public:
         // Since there are two 8's in the top left 3x3 sub-box, it is invalid.
         // A Sudoku board (partially filled) could be valid but is not necessarily solvable.
         // Only the filled cells need to be validated according to the mentioned rules.
-
         
+        int n = board.size();
+        // Cheacking Horizontal line of the sudoku 9x9 grid
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                std::cout<<board[i][j];
+            }
+            std::cout<<'\n';
+        }
+
+        std::cout<<'\n';
+        std::cout<<'\n';
+
+        // Cheacking Vertical line of the sudoku 9x9 grid
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                std::cout<<board[j][i];
+            }
+            std::cout<<'\n';
+        }
+
+        std::cout<<'\n';
+        std::cout<<'\n';
+
+        int nextStartGrid = 0;
+        int nextEndGrid = 3;
+        // Cheacking 9 grid in the sudoku 9x9 grid
+        for(int k = 0; k < 3; k++){
+            for(int i = 0; i < n; i++){
+                for(int j = nextStartGrid; j < nextEndGrid; j++){
+                    std::cout<<board[i][j];
+                }
+                std::cout<<'\n';
+            }
+                std::cout<<'\n';
+                nextStartGrid += 3;
+                nextEndGrid += 3;
+        }
+      
     }
 };
