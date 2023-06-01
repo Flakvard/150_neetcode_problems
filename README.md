@@ -3,7 +3,7 @@
 
 | Method for problemsolving | Problems |
 | ------------------------- | -------- |
-| Arrays & Hashing          | (8/9)    | 
+| Arrays & Hashing          | (9/9)    | 
 | Two Pointers              | (0/5)    |
 | Sliding Window            | (0/6)    |
 | Stack                     | (0/7)    |
