@@ -8,17 +8,16 @@ public:
         // Therefore its length is 4.
         using namespace std;
         int n = nums.size();
-        if(n == 0){
-            return 0;
-        }
+        if(n == 0) return 0;
+        
         sort(nums.begin(), nums.end());
 
         int largest_counter = 0;
         int counter = 1;
 
-        for(int i = 1; i <= n; i++){
+        for(int i = 1; i < n; i++){
             if(nums[i] != nums[i-1]){
-                if(nums[i] == nums[i-1] + 1){
+                if(nums[i] - nums[i-1] == 1){
                     counter++;
                 }
                 else{
